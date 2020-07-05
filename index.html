@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="js" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>lmGroup</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+        <section id="top" class="groups show">
+            <h1 id="toptitle">lmGroup</h1>
+            <div id="topbuttons">
+                <a href="javascript:void(0);" onclick="showpanels(about)" class="topbutton">About</a><br>
+                <a href="javascript:void(0);" onclick="showpanels(test)" class="topbutton">Test</a><br>
+                <a href="javascript:void(0);" onclick="showpanels(hello)" class="topbutton">Hello</a><br>
+                <a href="javascript:void(0);" onclick="showpanels(more)" class="topbutton">More</a>
+            </div>
+        </section>
+        <section id="panels">
+            <section id="about" class="groups panel">
+                <div class="panelwrap">
+                    <h2>ここはAboutのセクションです</h2>
+                    <p>こんにちは<br>こんにちは<br>こんにちは<br>こんにちは<br>こんにちは<br>こんにちは</p>
+                    <a href="https://alistotres.online">リンクのテスト</a>
+                    <p>もう少し長文を書きます。どうでもいい話ですが、オンライン授業でカメラをつけることになりました。実際カメラで電話することはなかったのでとても緊張してます。<br>
+                        カメラをする意味がないといえばまぁそれなないのでしょうが、それでもおかしいです。<br>
+                        なので僕はSnapCameraを使いたいと思います。あれはとても使えます。仮装カメラとしてとても有能なのですが、それをTeamsの会議で使います。すると面白くなり、成績が下がります。みなさん使わないようにしましょうね<br>
+                        以上さらだぼぉるでした。</p>
+                    <p>もう少し長文を書きます。どうでもいい話ですが、オンライン授業でカメラをつけることになりました。実際カメラで電話することはなかったのでとても緊張してます。<br>
+                        カメラをする意味がないといえばまぁそれなないのでしょうが、それでもおかしいです。<br>
+                        なので僕はSnapCameraを使いたいと思います。あれはとても使えます。仮装カメラとしてとても有能なのですが、それをTeamsの会議で使います。すると面白くなり、成績が下がります。みなさん使わないようにしましょうね<br>
+                        以上さらだぼぉるでした。</p>
+                    <p>もう少し長文を書きます。どうでもいい話ですが、オンライン授業でカメラをつけることになりました。実際カメラで電話することはなかったのでとても緊張してます。<br>
+                        カメラをする意味がないといえばまぁそれなないのでしょうが、それでもおかしいです。<br>
+                        なので僕はSnapCameraを使いたいと思います。あれはとても使えます。仮装カメラとしてとても有能なのですが、それをTeamsの会議で使います。すると面白くなり、成績が下がります。みなさん使わないようにしましょうね<br>
+                        以上さらだぼぉるでした。</p>
+                </div>
+                <div class="buttons">
+                    <div class="bg"></div>
+                    <a href="javascript:void(0);" onclick="changePanelL(about)"
+                        class="leftButton panelchangeButton">Top</a>
+                    <a href="javascript:void(0);" onclick="changePanelR(about)"
+                        class="rightButton panelchangeButton">More</a>
+                </div>
+                <a href="javascript:void(0);" onclick="nonepanels(about)" class="closeButton"></a>
+            </section>
+            <section id="test" class="groups panel">
+                <div class="panelwrap">
+                    <h2>これはTestの部分です</h2>
+                </div>
+                <a href="javascript:void(0);" onclick="changePanelL(test)"
+                    class="leftButton panelchangeButton">About</a>
+                <a href="javascript:void(0);" onclick="changePanelR(test)"
+                    class="rightButton panelchangeButton">Hello</a>
+                <a href="javascript:void(0);" onclick="nonepanels(test)" class="closeButton"></a>
+            </section>
+            <section id="hello" class="groups panel">
+                <div class="panelwrap">
+                    <h2>これはHELLOの部分です</h2>
+                </div>
+                <a href="javascript:void(0);" onclick="changePanelL(hello)"
+                    class="leftButton panelchangeButton">test</a>
+                <a href="javascript:void(0);" onclick="changePanelR(hello)"
+                    class="rightButton panelchangeButton">More</a>
+                <a href="javascript:void(0);" onclick="nonepanels(hello)" class="closeButton"></a>
+            </section>
+            <section id="more" class="groups panel">
+                <div class="panelwrap">
+                    <h2>これはMoreの部分です</h2>
+                </div>
+                <a href="javascript:void(0);" onclick="changePanelL(more)"
+                    class="leftButton panelchangeButton">Hello</a>
+                <a href="javascript:void(0);" onclick="changePanelR(more)" class="rightButton panelchangeButton">Top</a>
+                <a href="javascript:void(0);" onclick="nonepanels(more)" class="closeButton"></a>
+            </section>
+        </section>
+    </main>
+    <script src="./script.js" charset="utf-8"></script>
+</body>
+
+</html>
