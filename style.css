@@ -1,7 +1,8 @@
 /* fontはネットから */
 @font-face {
   font-family: 'Bersambung_IWK';
-  src: url("Tegak Bersambung_IWK.ttf");
+  src: url("Tegak Bersambung_IWK.woff2") format('woff2'),
+       url("Tegak Bersambung_IWK.woff") format('woff');
 }
 
 *{margin: 0; padding: 0;}
