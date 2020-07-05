@@ -1,3 +1,27 @@
+var getDevice = (function(){
+    var ua = navigator.userAgent;
+    if(ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0){
+        css_sp_tb();
+    }else if(ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0){
+        css_sp_tb();
+    }else{
+        rcss_sp_pc();
+    }
+})();
+function css_sp_tb(){
+  var css=document.createElement(“link”);
+  css.setAttribute(“rel”,”stylesheet”);
+  css.setAttribute(“type”,”text/css”);
+  css.setAttribute(“href”,”css/sp_tb_style.css”);
+  document.getElementsByTagName(“head”)[0].appendChild(css);
+}
+function css_pc(){
+  var css=document.createElement(“link”);
+  css.setAttribute(“rel”,”stylesheet”);
+  css.setAttribute(“type”,”text/css”);
+  css.setAttribute(“href”,”css/pc_style.css”);
+  document.getElementsByTagName(“head”)[0].appendChild(css);
+}
 // HEllO Saldbowl
 function showpanels(panelId) {
   var top = document.getElementById("top");

@@ -43,9 +43,6 @@ h2, h3, p, a {font-family: 'Noto Sans JP', sans-serif;}
   text-decoration: none;
   font-size: 3em;
 }
-.topbutton:hover {
-  font-size: 3.5em;
-}
 .topbutton::after {
   content: '';
   width: 0.5em;
@@ -154,9 +151,6 @@ h2, h3, p, a {font-family: 'Noto Sans JP', sans-serif;}
   margin: 30px auto;
 }
 @media (max-width: 843px) {
-  .topbutton:hover {
-    font-size: 2.2em;
-  }
   .closeButton{
     width: 30px;
     height: 30px;
