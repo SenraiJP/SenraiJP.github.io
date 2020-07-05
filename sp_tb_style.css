@@ -1,0 +1,8 @@
+.topbutton:active {
+  font-size: 3.5em;
+}
+@media (max-width: 843px) {
+  .topbutton:active {
+    font-size: 2.2em;
+  }
+}
