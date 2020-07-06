@@ -1,3 +1,5 @@
+var check = 0;
+console.log(check);
 var getDevice = (function(){
     var ua = navigator.userAgent;
     if(ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0){
@@ -5,75 +7,87 @@ var getDevice = (function(){
     }else if(ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0){
         css_sp_tb();
     }else{
-        rcss_sp_pc();
+        css_pc();
     }
 })();
 function css_sp_tb(){
-  var css=document.createElement(“link”);
-  css.setAttribute(“rel”,”stylesheet”);
-  css.setAttribute(“type”,”text/css”);
-  css.setAttribute(“href”,”css/sp_tb_style.css”);
-  document.getElementsByTagName(“head”)[0].appendChild(css);
+  var css_sp_tb_plus = document.createElement('link');
+  css_sp_tb_plus.setAttribute('rel','stylesheet');
+  css_sp_tb_plus.setAttribute('type','text/css');
+  css_sp_tb_plus.setAttribute('href','./sp_tb_style.css');
+  document.getElementsByTagName('head')[0].appendChild(css_sp_tb_plus);
 }
 function css_pc(){
-  var css=document.createElement(“link”);
-  css.setAttribute(“rel”,”stylesheet”);
-  css.setAttribute(“type”,”text/css”);
-  css.setAttribute(“href”,”css/pc_style.css”);
-  document.getElementsByTagName(“head”)[0].appendChild(css);
+  var css_pc_plus = document.createElement('link');
+  css_pc_plus.setAttribute('rel','stylesheet');
+  css_pc_plus.setAttribute('type','text/css');
+  css_pc_plus.setAttribute('href','./pc_style.css');
+  document.getElementsByTagName('head')[0].appendChild(css_pc_plus);
 }
-// HEllO Saldbowl
 function showpanels(panelId) {
-  var top = document.getElementById("top");
-  top.classList.remove("show");
-  top.classList.remove("showtop");
-  if (panelId == about){
-    var obj = document.getElementById("about");
-    obj.classList.remove("nonepanel");
-  }else if (panelId == test){
-    var obj = document.getElementById("test");
-    obj.classList.remove("nonepanel");
-  }else if (panelId == hello){
-    var obj = document.getElementById("hello");
-    obj.classList.remove("nonepanel");
-  }else if (panelId == more){
-    var obj = document.getElementById("more");
-    obj.classList.remove("nonepanel");
+  if (check == 0) {
+    var top = document.getElementById("top");
+    top.classList.remove("show");
+    top.classList.remove("showtop");
+    if (panelId == about){
+      check = 1;
+      console.log(check);
+      var obj = document.getElementById("about");
+      obj.classList.remove("nonepanel");
+    }else if (panelId == test){
+      var obj = document.getElementById("test");
+      obj.classList.remove("nonepanel");
+    }else if (panelId == hello){
+      var obj = document.getElementById("hello");
+      obj.classList.remove("nonepanel");
+    }else if (panelId == more){
+      var obj = document.getElementById("more");
+      obj.classList.remove("nonepanel");
+    }
+    obj.classList.add("showpanel");
+    top.classList.add("nonetop");
   }
-  obj.classList.add("showpanel");
-  top.classList.add("nonetop");
 }
 function nonepanels(btnId) {
-  if (btnId == about){
-    var obj = document.getElementById("about");
-    window.setTimeout(function() {
-      obj.classList.remove("showpanel");
-      obj.classList.add("nonepanel");
-    }, "2000");
-  }else if (btnId == test){
-    var obj = document.getElementById("test");
-    window.setTimeout(function() {
-      obj.classList.remove("showpanel");
-      obj.classList.add("nonepanel");
-    }, "2000");
-  } else if (btnId == hello){
-    var obj = document.getElementById("hello");
-    window.setTimeout(function() {
-      obj.classList.remove("showpanel");
-      obj.classList.add("nonepanel");
-    }, "2000");
-  } else if (btnId == more){
-    var obj = document.getElementById("more");
-    window.setTimeout(function() {
-      obj.classList.remove("showpanel");
-      obj.classList.add("nonepanel");
-    }, "2000");
+  if (check == 1) {
+    if (btnId == about){
+      console.log(check);
+      var obj = document.getElementById("about");
+      window.setTimeout(function() {
+        obj.classList.add("nonepanel");
+        check = 0;
+      }, "2000");
+    }else if (btnId == test){
+      var obj = document.getElementById("test");
+      window.setTimeout(function() {
+        obj.classList.remove("showpanel");
+        obj.classList.add("nonepanel");
+        check = 0;
+      }, "2000");
+    } else if (btnId == hello){
+      var obj = document.getElementById("hello");
+      window.setTimeout(function() {
+        obj.classList.remove("showpanel");
+        obj.classList.add("nonepanel");
+        check = 0;
+      }, "2000");
+    } else if (btnId == more){
+      var obj = document.getElementById("more");
+      window.setTimeout(function() {
+        obj.classList.remove("showpanel");
+        obj.classList.add("nonepanel");
+        check = 0;
+      }, "2000");
+    }
   }
   var top = document.getElementById("top");
   top.classList.remove("nonetop");
   top.classList.add("showtop");
 }
 function changePanelR(moveId) {
+  if (check == 1) {
+    console.log("haaaaaaaaa");
+  }
   if (moveId == about){
     var obj = document.getElementById("about");
     var obj2 = document.getElementById("test");
@@ -113,6 +127,7 @@ function changePanelR(moveId) {
     window.setTimeout(function() {
       obj.classList.remove("showpanel");
       obj.classList.add("nonepanel");
+      check = 0;
     }, "2000");
     var top = document.getElementById("top");
     top.classList.remove("nonetop");
@@ -126,6 +141,7 @@ function changePanelL(moveIdL) {
     window.setTimeout(function() {
       obj.classList.remove("showpanel");
       obj.classList.add("nonepanel");
+      check = 0;
     }, "2000");
     var top = document.getElementById("top");
     top.classList.remove("nonetop");
