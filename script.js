@@ -85,7 +85,7 @@ function changePanelR(moveId) {
       obj2.classList.add("showpanel");
 
     } else if (moveId == more) {
-      var obj = document.getElementById("hello");
+      var obj = document.getElementById("more");
       var obj2 = document.getElementById("top");
       var top = document.getElementById("top");
       top.classList.remove("nonetop");
