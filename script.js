@@ -80,9 +80,6 @@ function changePanelR(moveId) {
     } else if (moveId == hello) {
       var obj = document.getElementById("hello");
       var obj2 = document.getElementById("more");
-      obj2.classList.remove("nonepanel");
-      obj2.classList.add("movepanelR");
-      obj2.classList.add("showpanel");
 
     } else if (moveId == more) {
       var obj = document.getElementById("more");
@@ -121,30 +118,14 @@ function changePanelL(moveIdL) {
     } else if (moveIdL == test) {
       var obj = document.getElementById("test");
       var obj2 = document.getElementById("about");
-      obj2.classList.remove("nonepanel");
-      obj2.classList.add("movepanelL");
-      obj2.classList.add("showpanel");
-      window.setTimeout(function () {
-        obj.classList.remove("showpanel");
-        obj.classList.add("nonepanel");
-        obj2.classList.remove("movepanelL");
-        isAnimatingNow = Boolean(false);
-      }, "2000");
     } else if (moveIdL == hello) {
       var obj = document.getElementById("hello");
       var obj2 = document.getElementById("test");
-      obj2.classList.remove("nonepanel");
-      obj2.classList.add("movepanelL");
-      obj2.classList.add("showpanel");
-      window.setTimeout(function () {
-        obj.classList.remove("showpanel");
-        obj.classList.add("nonepanel");
-        obj2.classList.remove("movepanelL");
-        isAnimatingNow = Boolean(false);
-      }, "2000");
     } else if (moveIdL == more) {
       var obj = document.getElementById("more");
       var obj2 = document.getElementById("hello");
+    }
+    if (moveIdL !== about) {
       obj2.classList.remove("nonepanel");
       obj2.classList.add("movepanelL");
       obj2.classList.add("showpanel");
