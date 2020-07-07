@@ -25,7 +25,7 @@ function css_pc(){
   document.getElementsByTagName('head')[0].appendChild(css_pc_plus);
 }
 function showpanels(panelId) {
-  check = 1;
+  if (check == 0) {
     console.log(check);
     var top = document.getElementById("top");
     top.classList.remove("show");
@@ -49,6 +49,7 @@ function showpanels(panelId) {
     }
     obj.classList.add("showpanel");
     top.classList.add("nonetop");
+  }
 }
 function nonepanels(btnId) {
   if (check == 0) {
