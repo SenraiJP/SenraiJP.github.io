@@ -1,6 +1,6 @@
 let isAnimatingNow = Boolean(false);
 console.log(isAnimatingNow);
-var getDevice = (function () {
+(function () {
   const ua = navigator.userAgent;
   if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
     css_sp_tb();
