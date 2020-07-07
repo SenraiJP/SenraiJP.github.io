@@ -1,7 +1,7 @@
 let isAnimatingNow = Boolean(false);
 console.log(isAnimatingNow);
 var getDevice = (function () {
-  var ua = navigator.userAgent;
+  const ua = navigator.userAgent;
   if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
     css_sp_tb();
   } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
@@ -11,14 +11,14 @@ var getDevice = (function () {
   }
 })();
 function css_sp_tb() {
-  var css_sp_tb_plus = document.createElement('link');
+  let css_sp_tb_plus = document.createElement('link');
   css_sp_tb_plus.setAttribute('rel', 'stylesheet');
   css_sp_tb_plus.setAttribute('type', 'text/css');
   css_sp_tb_plus.setAttribute('href', './sp_tb_style.css');
   document.getElementsByTagName('head')[0].appendChild(css_sp_tb_plus);
 }
 function css_pc() {
-  var css_pc_plus = document.createElement('link');
+  let css_pc_plus = document.createElement('link');
   css_pc_plus.setAttribute('rel', 'stylesheet');
   css_pc_plus.setAttribute('type', 'text/css');
   css_pc_plus.setAttribute('href', './pc_style.css');
@@ -27,7 +27,7 @@ function css_pc() {
 function showpanels(panelId) {
   if (!isAnimatingNow) {
     console.log(isAnimatingNow);
-    var top = document.getElementById("top");
+    let top = document.getElementById("top");
     top.classList.remove("show");
     top.classList.remove("showtop");
     if (panelId == about) {
@@ -64,7 +64,7 @@ function nonepanels(btnId) {
       isAnimatingNow = Boolean(false);
     }, "2000");
   }
-  var top = document.getElementById("top");
+  let top = document.getElementById("top");
   top.classList.remove("nonetop");
   top.classList.add("showtop");
 }
@@ -84,7 +84,7 @@ function changePanelR(moveId) {
     } else if (moveId == more) {
       var obj = document.getElementById("more");
       var obj2 = document.getElementById("top");
-      var top = document.getElementById("top");
+      let top = document.getElementById("top");
       top.classList.remove("nonetop");
       top.classList.add("showtop");
     }
@@ -112,7 +112,7 @@ function changePanelL(moveIdL) {
         obj.classList.add("nonepanel");
         isAnimatingNow = Boolean(false);
       }, "2000");
-      var top = document.getElementById("top");
+      let top = document.getElementById("top");
       top.classList.remove("nonetop");
       top.classList.add("showtop");
     } else if (moveIdL == test) {
@@ -139,7 +139,7 @@ function changePanelL(moveIdL) {
   }
 }
 
-var countup = function () {
+let countup = function () {
   console.log(isAnimatingNow);
 }
-setInterval(countup, 100);
+setInterval(countup, 500);
