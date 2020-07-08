@@ -1,281 +1,341 @@
 /* fontはネットから */
+
 @font-face {
-  font-family: 'Bersambung_IWK';
-  src: url("Tegak Bersambung_IWK.woff2") format('woff2'),
-       url("Tegak Bersambung_IWK.woff") format('woff');
+    font-family: 'Bersambung_IWK';
+    src: url("Tegak Bersambung_IWK.woff2") format('woff2'), url("Tegak Bersambung_IWK.woff") format('woff'), url("Tegak Bersambung_IWK.ttf") format('ttf');
 }
 
-*{margin: 0; padding: 0;}
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .groups {
-  position: relative;
-  width: 100%;
-  height: auto;
-  min-height: 100%;
-  background-color: #fff;
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #fff;
 }
 
 main {
-  width: 100%;
-  height: auto;
-  min-height: 100%;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
 }
 
 h1 {
-  font-family: 'Bersambung_IWK', sans-serif;
-  font-size: 6em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform : translate(-50%,-50%);
-  transform : translate(-50%,-50%);
-}
-h2, h3, p, a {font-family: 'Noto Sans JP', sans-serif;}
-#topbuttons {
-  position: absolute;
-  bottom: 30px;
-}
-.topbutton {
-  position: relative;
-  display: inline-block;
-  padding-left: 20px;
-  font-weight: 900;
-  color: #000;
-  text-decoration: none;
-  font-size: 3em;
-}
-.topbutton::after {
-  content: '';
-  width: 0.5em;
-  height: 0.5em;
-  border: 0px;
-  border-top: solid 10px #000;
-  border-right: solid 10px #000;
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  position: absolute;
-  top: 50%;
-  right: -30px;
-  margin-top: -0.25em;
-}
-.topbutton:hover::after {
-  top: 45%;
-  right: -50px;
-  -ms-transform: rotate(-225deg);
-  -webkit-transform: rotate(-225deg);
-  transform: rotate(-225deg);
-}
-.closeButton{
-  display: block;
-  width: 50px;/*枠の大きさ*/
-  height: 50px;/*枠の大きさ*/
-  position: fixed;
-  top: 20px;
-  right: 20px;
+    font-family: 'Bersambung_IWK', sans-serif;
+    font-size: 6em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
-.closeButton::before, .closeButton::after {
-  content: "";
-  display: block;
-  width: 100%;/*バツ線の長さ*/
-  height: 10px;/*バツ線の太さ*/
-  background: #000;
-  transform: rotate(45deg);
-  transform-origin:0% 50%;
-  position: absolute;
-  top: calc(14% - 5px);
-  left: 14%;
+h2,
+h3,
+p,
+a {
+    font-family: 'Noto Sans JP', sans-serif;
 }
-.closeButton::after{
+
+#topbuttons {
+    position: absolute;
+    bottom: 30px;
+}
+
+.topbutton {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    font-weight: 900;
+    color: #000;
+    text-decoration: none;
+    font-size: 3em;
+}
+
+.topbutton::after {
+    content: '';
+    width: 0.5em;
+    height: 0.5em;
+    border: 0px;
+    border-top: solid 10px #000;
+    border-right: solid 10px #000;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    margin-top: -0.25em;
+}
+
+.topbutton:hover::after {
+    top: 45%;
+    right: -50px;
+    -ms-transform: rotate(-225deg);
+    -webkit-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+}
+
+.closeButton {
+    display: block;
+    width: 50px;
+    /*枠の大きさ*/
+    height: 50px;
+    /*枠の大きさ*/
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.closeButton::before,
+.closeButton::after {
+    content: "";
+    display: block;
+    width: 100%;
+    /*バツ線の長さ*/
+    height: 10px;
+    /*バツ線の太さ*/
+    background: #000;
+    transform: rotate(45deg);
+    transform-origin: 0% 50%;
+    position: absolute;
+    top: calc(14% - 5px);
+    left: 14%;
+}
+
+.closeButton::after {
     transform: rotate(-45deg);
-    transform-origin:100% 50%;
+    transform-origin: 100% 50%;
     left: auto;
     right: 14%;
 }
 
-.nonetop {transform-origin: left bottom; animation: rotation1 2s ease 0s 1 alternate forwards running;}
+.nonetop {
+    transform-origin: left bottom;
+    animation: rotation1 2s ease 0s 1 alternate forwards running;
+}
+
 @keyframes rotation1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-90deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-90deg);
+    }
 }
+
+
 /* 重ねる関係 */
-#top {position: fixed; z-index: 11;}
-.panel {position: absolute; top: 0px; left: 0px; display: none;}
-.showpanel {position: absolute;
-  display: block;
-  z-index: 9;
+
+#top {
+    position: fixed;
+    z-index: 11;
 }
-.nonepanel {position: absolute; display: none;}
-.showtop {position: absolute;
-  display: block;
-  transform-origin: left bottom;
-  animation: rotation2 2s ease 0s 1 alternate forwards running;}
+
+.panel {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.showpanel {
+    position: absolute;
+    display: block;
+    z-index: 9;
+}
+
+.nonepanel {
+    position: absolute;
+    display: none;
+}
+
+.showtop {
+    position: absolute;
+    display: block;
+    transform-origin: left bottom;
+    animation: rotation2 2s ease 0s 1 alternate forwards running;
+}
+
 @keyframes rotation2 {
-  0% {
-    transform: rotate(-90deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+    0% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
-.movepanelR {position: absolute;
-  display: block;
-  transform-origin: left bottom;
-  animation: moveR 2s ease 0s 1 alternate forwards running;}
-.movepanelL {z-index: 10;
-  animation: moveL 2s ease 0s 1 alternate forwards running;}
+
+.movepanelR {
+    position: absolute;
+    display: block;
+    transform-origin: left bottom;
+    animation: moveR 2s ease 0s 1 alternate forwards running;
+}
+
+.movepanelL {
+    z-index: 10;
+    animation: moveL 2s ease 0s 1 alternate forwards running;
+}
+
 @keyframes moveR {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
 }
+
 @keyframes moveL {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
 }
 
 .panelwrap {
-  width: 70%;
-  max-width: 500px;
-  margin: 30px auto;
-}
-@media (max-width: 843px) {
-  .closeButton{
-    width: 30px;
-    height: 30px;
-  }
-  .closeButton::before, .closeButton::after {
-    width: 100%;/*バツ線の長さ*/
-    height: 5px;/*バツ線の太さ*/
-  }
-  .topbutton {
-    font-size: 2em;
-  }
-  .panelwrap {
     width: 70%;
     max-width: 500px;
-    padding-bottom: 30px;
-  }
-  .bg {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 60px;
-    background-color: #fff;
-  }
-  .buttons {
-    position: fixed;
-    display: inline-block;
-    bottom:0;
-    left:0;
-    width: 100%;
-  }
-  .panelchangeButton {
-    font-weight: 700;
-    color: #000;
-    text-decoration: none;
-    font-size: 1.5em;
-  }
-  .leftButton {
-    position: fixed;
-    display: inline-block;
-    bottom: 20px;
-    left: 3em;
-    -webkit-transform : translate(-20px);
-    transform : translate(-20px);
-  }
-  .leftButton::before {
-    content: '';
-    width: 2em;
-    height: 0.5em;
-    border: 0px;
-    border-top: solid 5px #000;
-    position: absolute;
-    top: 50%;
-    left: -2.5em;
-  }
-  .rightButton {
-    position: fixed;
-    bottom: 10px;
-    right: 0.7em;
-    -webkit-transform : translate(-20px,-0.7em);
-    transform : translate(-20px,-0.7em);
-  }
-  .rightButton::before {
-    content: '';
-    width: 0.5em;
-    height: 0.5em;
-    border: 0px;
-    border-top: solid 5px #000;
-    border-right: solid 5px #000;
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    top: 50%;
-    right: -30px;
-    margin-top: -0.25em;
-  }
+    margin: 30px auto;
 }
+
+@media (max-width: 843px) {
+    .closeButton {
+        width: 30px;
+        height: 30px;
+    }
+    .closeButton::before,
+    .closeButton::after {
+        width: 100%;
+        /*バツ線の長さ*/
+        height: 5px;
+        /*バツ線の太さ*/
+    }
+    .topbutton {
+        font-size: 2em;
+    }
+    .panelwrap {
+        width: 70%;
+        max-width: 500px;
+        padding-bottom: 30px;
+    }
+    .bg {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 60px;
+        background-color: #fff;
+    }
+    .buttons {
+        position: fixed;
+        display: inline-block;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    .panelchangeButton {
+        font-weight: 700;
+        color: #000;
+        text-decoration: none;
+        font-size: 1.5em;
+    }
+    .leftButton {
+        position: fixed;
+        display: inline-block;
+        bottom: 20px;
+        left: 3em;
+        -webkit-transform: translate(-20px);
+        transform: translate(-20px);
+    }
+    .leftButton::before {
+        content: '';
+        width: 2em;
+        height: 0.5em;
+        border: 0px;
+        border-top: solid 5px #000;
+        position: absolute;
+        top: 50%;
+        left: -2.5em;
+    }
+    .rightButton {
+        position: fixed;
+        bottom: 10px;
+        right: 0.7em;
+        -webkit-transform: translate(-20px, -0.7em);
+        transform: translate(-20px, -0.7em);
+    }
+    .rightButton::before {
+        content: '';
+        width: 0.5em;
+        height: 0.5em;
+        border: 0px;
+        border-top: solid 5px #000;
+        border-right: solid 5px #000;
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        right: -30px;
+        margin-top: -0.25em;
+    }
+}
+
 @media (min-width: 844px) {
-  .panelchangeButton {
-    position: fixed;
-    display: inline-block;
-    font-weight: 700;
-    color: #000;
-    text-decoration: none;
-    font-size: 2em;
-  }
-  .leftButton {
-    position: fixed;
-    display: inline-block;
-    top: 50%;
-    left: 3em;
-    -webkit-transform : translate(-50%);
-    transform : translate(-50%);
-  }
-  .leftButton::before {
-    content: '';
-    width: 2em;
-    height: 0.5em;
-    border: 0px;
-    border-top: solid 5px #000;
-    position: absolute;
-    top: 50%;
-    left: -2.5em;
-  }
-  .rightButton {
-    position: fixed;
-    top: 50%;
-    right: 0px;
-    -webkit-transform : translate(-50%,-0px);
-    transform : translate(-50%,-0px);
-  }
-  .rightButton::before {
-    content: '';
-    width: 0.5em;
-    height: 0.5em;
-    border: 0px;
-    border-top: solid 5px #000;
-    border-right: solid 5px #000;
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    top: 50%;
-    right: -30px;
-    margin-top: -0.25em;
-  }
+    .panelchangeButton {
+        position: fixed;
+        display: inline-block;
+        font-weight: 700;
+        color: #000;
+        text-decoration: none;
+        font-size: 2em;
+    }
+    .leftButton {
+        position: fixed;
+        display: inline-block;
+        top: 50%;
+        left: 3em;
+        -webkit-transform: translate(-50%);
+        transform: translate(-50%);
+    }
+    .leftButton::before {
+        content: '';
+        width: 2em;
+        height: 0.5em;
+        border: 0px;
+        border-top: solid 5px #000;
+        position: absolute;
+        top: 50%;
+        left: -2.5em;
+    }
+    .rightButton {
+        position: fixed;
+        top: 50%;
+        right: 0px;
+        -webkit-transform: translate(-50%, -0px);
+        transform: translate(-50%, -0px);
+    }
+    .rightButton::before {
+        content: '';
+        width: 0.5em;
+        height: 0.5em;
+        border: 0px;
+        border-top: solid 5px #000;
+        border-right: solid 5px #000;
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: absolute;
+        top: 50%;
+        right: -30px;
+        margin-top: -0.25em;
+    }
 }
