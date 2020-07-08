@@ -1,4 +1,6 @@
+/*jshint esversion: 6 */
 let isAnimatingNow = Boolean(false);
+const panelList = ['top', 'about', 'test', 'hello', 'more'];
 console.log(isAnimatingNow);
 (function () {
   const ua = navigator.userAgent;
@@ -30,16 +32,7 @@ function showpanels(panelId) {
     let top = document.getElementById("top");
     top.classList.remove("show");
     top.classList.remove("showtop");
-    if (panelId == about) {
-      var obj = document.getElementById("about");
-    } else if (panelId == test) {
-      var obj = document.getElementById("test");
-    } else if (panelId == hello) {
-      var obj = document.getElementById("hello");
-    } else if (panelId == more) {
-      var obj = document.getElementById("more");
-      obj.classList.remove("nonepanel");
-    }
+    var obj = document.getElementById(panelId);
     obj.classList.remove("nonepanel");
     isAnimatingNow = Boolean(false);
     obj.classList.add("showpanel");
@@ -49,16 +42,7 @@ function showpanels(panelId) {
 function nonepanels(btnId) {
   if (!isAnimatingNow) {
     isAnimatingNow = Boolean(true);
-    if (btnId == about) {
-      console.log(isAnimatingNow);
-      var obj = document.getElementById("about");
-    } else if (btnId == test) {
-      var obj = document.getElementById("test");
-    } else if (btnId == hello) {
-      var obj = document.getElementById("hello");
-    } else if (btnId == more) {
-      var obj = document.getElementById("more");
-    }
+    var obj = document.getElementById(btnId);
     window.setTimeout(function () {
       obj.classList.add("nonepanel");
       isAnimatingNow = Boolean(false);
@@ -71,24 +55,18 @@ function nonepanels(btnId) {
 function changePanelR(moveId) {
   if (!isAnimatingNow) {
     isAnimatingNow = Boolean(true);
-    if (moveId == about) {
-      var obj = document.getElementById("about");
-      var obj2 = document.getElementById("test");
-    } else if (moveId == test) {
-      var obj = document.getElementById("test");
-      var obj2 = document.getElementById("hello");
-    } else if (moveId == hello) {
-      var obj = document.getElementById("hello");
-      var obj2 = document.getElementById("more");
-
-    } else if (moveId == more) {
-      var obj = document.getElementById("more");
-      var obj2 = document.getElementById("top");
-      let top = document.getElementById("top");
-      top.classList.remove("nonetop");
-      top.classList.add("showtop");
+    var panelIndex = panelList.findIndex(item => item === moveId);
+    panelIndex++;
+    if (panelIndex === panelList.length) {
+      panelIndex = 0;
     }
-    if (moveId !== more) {
+    var obj = document.getElementById(moveId);
+    var obj2 = document.getElementById(panelList[panelIndex]);
+    console.log(panelIndex);
+    if (panelIndex === 0) {
+      obj2.classList.remove("nonetop");
+      obj2.classList.add("showtop");
+    } else {
       obj2.classList.remove("nonepanel");
       obj2.classList.add("movepanelR");
       obj2.classList.add("showpanel");
@@ -96,7 +74,7 @@ function changePanelR(moveId) {
     window.setTimeout(function () {
       obj.classList.remove("showpanel");
       obj.classList.add("nonepanel");
-      if (moveId !== more) obj2.classList.remove("movepanelR")
+      if (panelIndex !== 0) obj2.classList.remove("movepanelR");
       isAnimatingNow = Boolean(false);
     }, "2000");
   }
@@ -104,42 +82,32 @@ function changePanelR(moveId) {
 function changePanelL(moveIdL) {
   if (!isAnimatingNow) {
     isAnimatingNow = Boolean(true);
-    if (moveIdL == about) {
-      var obj = document.getElementById("about");
-      var obj2 = document.getElementById("top");
-      window.setTimeout(function () {
-        obj.classList.remove("showpanel");
-        obj.classList.add("nonepanel");
-        isAnimatingNow = Boolean(false);
-      }, "2000");
-      let top = document.getElementById("top");
-      top.classList.remove("nonetop");
-      top.classList.add("showtop");
-    } else if (moveIdL == test) {
-      var obj = document.getElementById("test");
-      var obj2 = document.getElementById("about");
-    } else if (moveIdL == hello) {
-      var obj = document.getElementById("hello");
-      var obj2 = document.getElementById("test");
-    } else if (moveIdL == more) {
-      var obj = document.getElementById("more");
-      var obj2 = document.getElementById("hello");
+    var panelIndex = panelList.findIndex(item => item === moveIdL);
+    panelIndex--;
+    if (panelIndex == panelIndex.length) {
+      panelIndex = 0;
     }
-    if (moveIdL !== about) {
+    console.log(panelIndex);
+    var obj = document.getElementById(moveIdL);
+    var obj2 = document.getElementById(panelList[panelIndex]);
+    if (panelIndex === 0) {
+      obj2.classList.remove("nonetop");
+      obj2.classList.add("showtop");
+    } else {
       obj2.classList.remove("nonepanel");
       obj2.classList.add("movepanelL");
       obj2.classList.add("showpanel");
-      window.setTimeout(function () {
-        obj.classList.remove("showpanel");
-        obj.classList.add("nonepanel");
-        obj2.classList.remove("movepanelL");
-        isAnimatingNow = Boolean(false);
-      }, "2000");
     }
+    window.setTimeout(function () {
+      obj.classList.remove("showpanel");
+      obj.classList.add("nonepanel");
+      if (panelIndex !== 0) obj2.classList.remove("movepanelL");
+      isAnimatingNow = Boolean(false);
+    }, "2000");
   }
 }
 
 let countup = function () {
   console.log(isAnimatingNow);
-}
+};
 setInterval(countup, 500);

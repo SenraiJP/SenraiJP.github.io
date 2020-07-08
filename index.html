@@ -16,10 +16,10 @@
     <section id="top" class="groups show">
       <h1 id="toptitle">lmGroup</h1>
       <div id="topbuttons">
-        <a href="javascript:void(0);" onclick="showpanels(about)" class="topbutton">About</a><br>
-        <a href="javascript:void(0);" onclick="showpanels(test)" class="topbutton">Test</a><br>
-        <a href="javascript:void(0);" onclick="showpanels(hello)" class="topbutton">Hello</a><br>
-        <a href="javascript:void(0);" onclick="showpanels(more)" class="topbutton">More</a>
+        <a href="javascript:void(0);" onclick="showpanels('about')" class="topbutton">About</a><br>
+        <a href="javascript:void(0);" onclick="showpanels('test')" class="topbutton">Test</a><br>
+        <a href="javascript:void(0);" onclick="showpanels('hello')" class="topbutton">Hello</a><br>
+        <a href="javascript:void(0);" onclick="showpanels('more')" class="topbutton">More</a>
       </div>
     </section>
     <section id="panels">
@@ -43,35 +43,35 @@
         </div>
         <div class="buttons">
           <div class="bg"></div>
-          <a href="javascript:void(0);" onclick="changePanelL(about)" class="leftButton panelchangeButton">Top</a>
-          <a href="javascript:void(0);" onclick="changePanelR(about)" class="rightButton panelchangeButton">Test</a>
+          <a href="javascript:void(0);" onclick="changePanelL('about')" class="leftButton panelchangeButton">Top</a>
+          <a href="javascript:void(0);" onclick="changePanelR('about')" class="rightButton panelchangeButton">Test</a>
         </div>
-        <a href="javascript:void(0);" onclick="nonepanels(about)" class="closeButton"></a>
+        <a href="javascript:void(0);" onclick="nonepanels('about')" class="closeButton"></a>
       </section>
       <section id="test" class="groups panel">
         <div class="panelwrap">
           <h2>これはTestの部分です</h2>
         </div>
-        <a href="javascript:void(0);" onclick="changePanelL(test)" class="leftButton panelchangeButton">About</a>
-        <a href="javascript:void(0);" onclick="changePanelR(test)" class="rightButton panelchangeButton">Hello</a>
-        <a href="javascript:void(0);" onclick="nonepanels(test)" class="closeButton"></a>
+        <a href="javascript:void(0);" onclick="changePanelL('test')" class="leftButton panelchangeButton">About</a>
+        <a href="javascript:void(0);" onclick="changePanelR('test')" class="rightButton panelchangeButton">Hello</a>
+        <a href="javascript:void(0);" onclick="nonepanels('test')" class="closeButton"></a>
       </section>
       <section id="hello" class="groups panel">
         <div class="panelwrap">
           <h2>これはHELLOの部分です</h2>
           <p>コーンにちはーーーーー</p>
         </div>
-        <a href="javascript:void(0);" onclick="changePanelL(hello)" class="leftButton panelchangeButton">test</a>
-        <a href="javascript:void(0);" onclick="changePanelR(hello)" class="rightButton panelchangeButton">More</a>
-        <a href="javascript:void(0);" onclick="nonepanels(hello)" class="closeButton"></a>
+        <a href="javascript:void(0);" onclick="changePanelL('hello')" class="leftButton panelchangeButton">test</a>
+        <a href="javascript:void(0);" onclick="changePanelR('hello')" class="rightButton panelchangeButton">More</a>
+        <a href="javascript:void(0);" onclick="nonepanels('hello')" class="closeButton"></a>
       </section>
       <section id="more" class="groups panel">
         <div class="panelwrap">
           <h2>これはMoreの部分です</h2>
         </div>
-        <a href="javascript:void(0);" onclick="changePanelL(more)" class="leftButton panelchangeButton">Hello</a>
-        <a href="javascript:void(0);" onclick="changePanelR(more)" class="rightButton panelchangeButton">Top</a>
-        <a href="javascript:void(0);" onclick="nonepanels(more)" class="closeButton"></a>
+        <a href="javascript:void(0);" onclick="changePanelL('more')" class="leftButton panelchangeButton">Hello</a>
+        <a href="javascript:void(0);" onclick="changePanelR('more')" class="rightButton panelchangeButton">Top</a>
+        <a href="javascript:void(0);" onclick="nonepanels('more')" class="closeButton"></a>
       </section>
     </section>
   </main>
