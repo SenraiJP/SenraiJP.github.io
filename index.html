@@ -12,19 +12,18 @@
 
 <body>
     <main>
-        <section id="noIE" class="groups showpanel">
-            <p class="errorPanelTitle">lmGroup</p>
-            <div>
-                <h1 class="errorPanelMain">Internet Explorerではご覧いただけません</h1>
+        <section id="noIE" class="groups panel">
+            <p class="errorPanel errorPanelTitle">lmGroup</p>
+            <h1 class="errorPanel errorPanelMain">Internet Explorerではご覧いただけません</h1>
+            <div class="errorPanel errorPanelBox">
+                <h2 class="errorPanel errorPanelText"><a href="https://www.microsoft.com/ja-jp/edge">Microsoft Edge</a>, <a href="https://www.google.com/intl/ja_jp/chrome/">Google Chrome</a>, <a href="https://www.mozilla.org/ja/firefox/new/">Mozilla Firefox</a>など</h2>
+                <h2 class="errorPanel errorPanelText">モダンブラウザでご利用ください</h2>
             </div>
-            <div class="errorPanelBox">
-                <h2 class="errorPanelText"><a href="https://www.microsoft.com/ja-jp/edge">Microsoft Edge</a>, <a href="">Google Chrome</a>, <a href="">Mozilla Firefox</a>など</h2>
-                <h2 class="errorPanelText">モダンブラウザでご利用ください</h2>
-            </div>
-            <h2 class="errorPanelSubText">秒後にGoogle Chromeのダウンロードページに遷移します</h2>
+            <h3 class="errorPanel errorPanelSubText">
+                <p id="errorPanelCount">10</p>秒後にGoogle Chromeのダウンロードページに遷移します</h3>
         </section>
         <section id="top" class="groups panel">
-            <h1 id="toptitle">lmGroup</h1>
+            <h1 id="toptitle" class="toptitle">lmGroup</h1>
             <div id="topbuttons">
                 <a href="javascript:void(0);" onclick="showpanels('about')" class="topbutton">About</a><br>
                 <a href="javascript:void(0);" onclick="showpanels('test')" class="topbutton">Test</a><br>
