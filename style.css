@@ -339,3 +339,39 @@ a {
         margin-top: -0.25em;
     }
 }
+
+.errorPanelTitle {
+    font-family: 'Bersambung_IWK', sans-serif;
+    font-size: 5em;
+    text-align: center;
+    margin-top: 2.5%;
+}
+
+.errorPanelMain {
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+    display: inline-block;
+    font-size: 2.5em;
+    padding: 0.5em;
+    margin-top: 4%;
+}
+
+.errorPanelText {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0.5em;
+}
+
+.errorPanelBox {
+    margin-top: 4%;
+    display: block;
+}
+
+.errorPanelSubText {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.25em;
+    text-align: center;
+    margin: 1em;
+    margin-top: 1.5em;
+}
