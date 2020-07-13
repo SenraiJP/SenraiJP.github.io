@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 let isAnimatingNow = Boolean(false);
-const panelList = ['top', 'about', 'test', 'hello', 'more'];
+const panelList = ['top', 'concept', 'about', 'members', 'links'];
 (function() {
     const ua = navigator.userAgent;
     if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {

@@ -37,16 +37,16 @@
         <section id="top" class="groups panel">
             <h1 id="toptitle" class="toptitle">lmGroup</h1>
             <div id="topbuttons">
+                <a href="javascript:void(0);" onclick="showpanels('concept')" class="topbutton">Concept</a><br>
                 <a href="javascript:void(0);" onclick="showpanels('about')" class="topbutton">About</a><br>
-                <a href="javascript:void(0);" onclick="showpanels('test')" class="topbutton">Test</a><br>
-                <a href="javascript:void(0);" onclick="showpanels('hello')" class="topbutton">Hello</a><br>
-                <a href="javascript:void(0);" onclick="showpanels('more')" class="topbutton">More</a>
+                <a href="javascript:void(0);" onclick="showpanels('members')" class="topbutton">Members</a><br>
+                <a href="javascript:void(0);" onclick="showpanels('links')" class="topbutton">Links</a>
             </div>
         </section>
         <section id="panels">
-            <section id="about" class="groups panel">
+            <section id="concept" class="groups panel">
                 <div class="panelwrap">
-                    <h2>ここはAboutのセクションです</h2>
+                    <h2>ここはConceptのセクションです</h2>
                     <p>こんにちは<br>こんにちは<br>こんにちは<br>こんにちは<br>こんにちは<br>こんにちは</p>
                     <a href="https://alistotres.online">リンクのテスト</a>
                     <p>もう少し長文を書きます。どうでもいい話ですが、オンライン授業でカメラをつけることになりました。実際カメラで電話することはなかったのでとても緊張してます。<br> カメラをする意味がないといえばまぁそれなないのでしょうが、それでもおかしいです。
@@ -64,35 +64,35 @@
                 </div>
                 <div class="buttons">
                     <div class="bg"></div>
-                    <a href="javascript:void(0);" onclick="changePanelL('about')" class="leftButton panelchangeButton">Top</a>
-                    <a href="javascript:void(0);" onclick="changePanelR('about')" class="rightButton panelchangeButton">Test</a>
+                    <a href="javascript:void(0);" onclick="changePanelL('concept')" class="leftButton panelchangeButton">Top</a>
+                    <a href="javascript:void(0);" onclick="changePanelR('concept')" class="rightButton panelchangeButton">About</a>
                 </div>
+                <a href="javascript:void(0);" onclick="nonepanels('concept')" class="closeButton"></a>
+            </section>
+            <section id="about" class="groups panel">
+                <div class="panelwrap">
+                    <h2>これはAboutの部分です</h2>
+                </div>
+                <a href="javascript:void(0);" onclick="changePanelL('about')" class="leftButton panelchangeButton">Concept</a>
+                <a href="javascript:void(0);" onclick="changePanelR('about')" class="rightButton panelchangeButton">Members</a>
                 <a href="javascript:void(0);" onclick="nonepanels('about')" class="closeButton"></a>
             </section>
-            <section id="test" class="groups panel">
-                <div class="panelwrap">
-                    <h2>これはTestの部分です</h2>
-                </div>
-                <a href="javascript:void(0);" onclick="changePanelL('test')" class="leftButton panelchangeButton">About</a>
-                <a href="javascript:void(0);" onclick="changePanelR('test')" class="rightButton panelchangeButton">Hello</a>
-                <a href="javascript:void(0);" onclick="nonepanels('test')" class="closeButton"></a>
-            </section>
-            <section id="hello" class="groups panel">
+            <section id="members" class="groups panel">
                 <div class="panelwrap">
                     <h2>これはHELLOの部分です</h2>
                     <p>コーンにちはーーーーー</p>
                 </div>
-                <a href="javascript:void(0);" onclick="changePanelL('hello')" class="leftButton panelchangeButton">test</a>
-                <a href="javascript:void(0);" onclick="changePanelR('hello')" class="rightButton panelchangeButton">More</a>
-                <a href="javascript:void(0);" onclick="nonepanels('hello')" class="closeButton"></a>
+                <a href="javascript:void(0);" onclick="changePanelL('members')" class="leftButton panelchangeButton">about</a>
+                <a href="javascript:void(0);" onclick="changePanelR('members')" class="rightButton panelchangeButton">Links</a>
+                <a href="javascript:void(0);" onclick="nonepanels('members')" class="closeButton"></a>
             </section>
-            <section id="more" class="groups panel">
+            <section id="links" class="groups panel">
                 <div class="panelwrap">
-                    <h2>これはMoreの部分です</h2>
+                    <h2>これはLinksの部分です</h2>
                 </div>
-                <a href="javascript:void(0);" onclick="changePanelL('more')" class="leftButton panelchangeButton">Hello</a>
-                <a href="javascript:void(0);" onclick="changePanelR('more')" class="rightButton panelchangeButton">Top</a>
-                <a href="javascript:void(0);" onclick="nonepanels('more')" class="closeButton"></a>
+                <a href="javascript:void(0);" onclick="changePanelL('links')" class="leftButton panelchangeButton">Members</a>
+                <a href="javascript:void(0);" onclick="changePanelR('links')" class="rightButton panelchangeButton">Top</a>
+                <a href="javascript:void(0);" onclick="nonepanels('links')" class="closeButton"></a>
             </section>
         </section>
     </main>
