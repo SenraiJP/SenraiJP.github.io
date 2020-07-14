@@ -34,7 +34,7 @@ function showpanels(panelId) {
         let top = document.getElementById("top");
         top.classList.remove("show");
         top.classList.remove("showtop");
-        var obj = document.getElementById(panelId);
+        let obj = document.getElementById(panelId);
         obj.classList.remove("nonepanel");
         isAnimatingNow = Boolean(false);
         obj.classList.add("showpanel");
