@@ -41,6 +41,11 @@ a {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
 #topbuttons {
     position: absolute;
     bottom: 30px;
@@ -379,4 +384,9 @@ a {
 
 #errorPanelCount {
     display: inline;
+}
+
+.jsError {
+    margin-top: 10%;
+    text-align: center;
 }
