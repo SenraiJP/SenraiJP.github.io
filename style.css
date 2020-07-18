@@ -5,6 +5,11 @@
     src: url("Tegak Bersambung_IWK.woff2") format('woff2'), url("Tegak Bersambung_IWK.woff") format('woff'), url("Tegak Bersambung_IWK.ttf") format('ttf');
 }
 
+@font-face {
+    font-family: 'NotoSansJp-EnBlack';
+    src: url("NotoSansJp-EnBlack.woff2") format('woff2'), url("NotoSansJp-EnBlack.woff") format('woff');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -40,9 +45,11 @@ main {
 
 h2,
 h3,
+h4,
 p,
 a {
     font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
 }
 
 h2 {
@@ -56,6 +63,7 @@ h2 {
 }
 
 .topbutton {
+    font-family: 'NotoSansJP-EnBlack', sans-serif;
     position: relative;
     display: inline-block;
     padding-left: 20px;
@@ -430,18 +438,19 @@ h2 {
 .memberName {
     text-align: center;
     font-size: 1.5em;
+    font-weight: 700;
 }
 
 .memberPosition {
     text-align: center;
     font-size: 1em;
     color: #808080;
+    font-weight: 700;
 }
 
 .memberAccount {
     text-align: center;
-    font-size: 1.1em;
-    color: #000;
+    font-size: 1em;
 }
 
 .memberIcon {
