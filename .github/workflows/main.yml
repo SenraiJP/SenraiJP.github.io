@@ -1,0 +1,24 @@
+name: Auto Minify
+
+on:
+  push:
+    branches:
+      - develop
+
+env:
+  FILE_PATTERN: "/*.{css,js}"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        
+      - name: Auto Minify
+        uses: nizarmah/auto-minify@master
+      
+      - name: Auto committing minified files
+        uses: stefanzweifel/git-auto-commit-action@v3.0.0
+        with:
+          commit_message: "Github Action: Auto Minified JS and CSS files"
+          branch: master
