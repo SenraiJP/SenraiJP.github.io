@@ -3,11 +3,13 @@
 @font-face {
     font-family: 'Bersambung_IWK';
     src: url("Tegak Bersambung_IWK.woff2") format('woff2'), url("Tegak Bersambung_IWK.woff") format('woff'), url("Tegak Bersambung_IWK.ttf") format('ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'NotoSansJp-EnBlack';
     src: url("NotoSansJp-EnBlack.woff2") format('woff2'), url("NotoSansJp-EnBlack.woff") format('woff');
+    font-display: swap;
 }
 
 * {
