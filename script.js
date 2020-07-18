@@ -30,7 +30,6 @@ function css_pc() {
 
 function showpanels(panelId) {
     if (!isAnimatingNow) {
-        console.log(isAnimatingNow);
         let top = document.getElementById("top");
         top.classList.remove("show");
         top.classList.remove("showtop");
@@ -66,7 +65,6 @@ function changePanelR(moveId) {
         }
         var obj = document.getElementById(moveId);
         var obj2 = document.getElementById(panelList[panelIndex]);
-        console.log(panelIndex);
         if (panelIndex === 0) {
             obj2.classList.remove("nonetop");
             obj2.classList.add("showtop");
@@ -92,7 +90,6 @@ function changePanelL(moveIdL) {
         if (panelIndex == panelIndex.length) {
             panelIndex = 0;
         }
-        console.log(panelIndex);
         var obj = document.getElementById(moveIdL);
         var obj2 = document.getElementById(panelList[panelIndex]);
         if (panelIndex === 0) {
@@ -111,8 +108,3 @@ function changePanelL(moveIdL) {
         }, "2000");
     }
 }
-
-let countup = function() {
-    console.log(isAnimatingNow);
-};
-setInterval(countup, 500);
