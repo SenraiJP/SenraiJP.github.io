@@ -11,7 +11,7 @@
 }
 
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 .groups {
@@ -146,8 +146,8 @@ h2 {
 }
 
 .panel {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -396,7 +396,6 @@ h2 {
     margin-top: 10%;
     text-align: center;
 }
-<<<<<<< Updated upstream
 
 .members {
     display: flex;
@@ -453,5 +452,3 @@ h2 {
     margin-left: auto;
     margin-right: auto;
 }
-=======
->>>>>>> Stashed changes
