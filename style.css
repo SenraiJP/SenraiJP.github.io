@@ -378,6 +378,7 @@ h2 {
     padding: 0.5em;
     margin-top: 5%;
     margin-bottom: 2.5%;
+    font-weight: 700;
 }
 
 .errorPanelText {
@@ -404,6 +405,7 @@ h2 {
 .jsError {
     margin-top: 10%;
     text-align: center;
+    font-weight: 700;
 }
 
 .members {
