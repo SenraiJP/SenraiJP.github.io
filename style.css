@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Bersambung_IWK';
-    src: url("Tegak Bersambung_IWK.woff2") format('woff2'), url("Tegak Bersambung_IWK.woff") format('woff'), url("Tegak Bersambung_IWK.ttf") format('ttf');
+    src: url("TegakBersambungIWK_subsetted.woff2") format('woff2'), url("TegakBersambungIWK_subsetted.woff") format('woff'), url("TegakBersambungIWK_subsetted.ttf") format('ttf');
 }
 
 @font-face {
