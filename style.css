@@ -75,6 +75,7 @@ h2 {
 }
 
 .topbutton::after {
+    font-family: 'NotoSansJP-EnBlack', sans-serif;
     content: '';
     width: 0.5em;
     height: 0.5em;
