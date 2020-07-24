@@ -11,11 +11,6 @@
     font-display: swap;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
     overflow-x: hidden;
 }
@@ -32,6 +27,10 @@ main {
     width: 100%;
     height: auto;
     min-height: 100%;
+}
+
+#concept {
+    overflow: hidden;
 }
 
 .toptitle {
@@ -407,6 +406,118 @@ h2 {
     margin-top: 10%;
     text-align: center;
     font-weight: 700;
+}
+
+@media screen and (min-width: 843px) {
+    .conceptDescribeText {
+        font-size: 1.3em;
+        margin-right: 10%;
+    }
+    .conceptMain {
+        -webkit-transform: translateX(-40%);
+        transform: translateX(-40%);
+    }
+    @keyframes conceptPan0 {
+        from {
+            transform: translateY(80%);
+            -webkit-transform: translateY(80%);
+        }
+        to {
+            transform: translateY(20%);
+            -webkit-transform: translateY(20%);
+        }
+    }
+    @keyframes conceptPan1 {
+        from {
+            transform: translateY(20%);
+            -webkit-transform: translateY(20%);
+        }
+        to {
+            left: 17.5%;
+            -webkit-transform: translate(-17.5%, 20%);
+            transform: translate(-17.5%, 20%);
+        }
+    }
+}
+
+@media screen and (max-width: 844px) {
+    .conceptDescribe {
+        font-size: 1em;
+    }
+    .conceptMain {
+        -webkit-transform: translateX(-45%);
+        transform: translateX(-45%);
+    }
+    @keyframes conceptPan0 {
+        from {
+            transform: translateY(80%);
+            -webkit-transform: translateY(80%);
+        }
+        to {
+            transform: translateY(20%);
+            -webkit-transform: translateY(20%);
+        }
+    }
+    @keyframes conceptPan1 {
+        from {
+            transform: translateY(20%);
+            -webkit-transform: translateY(20%);
+        }
+        to {
+            font-size: 2rem;
+            left: 10%;
+            -webkit-transform: translate(-10%, 30%);
+            transform: translate(-10%, 30%);
+        }
+    }
+}
+
+@keyframes conceptFadeIn {
+    from {
+        opacity: 0.25;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes conceptDescribeFadeIn {
+    from {
+        -webkit-transform: translate(-7.5%, -40%);
+        transform: translate(-15%, -40%);
+    }
+    to {
+        -webkit-transform: translate(-15%, -45%);
+        transform: translate(-15%, -45%);
+    }
+}
+
+.conceptMain {
+    writing-mode: vertical-rl;
+    position: absolute;
+    opacity: 0;
+    left: 45%;
+    font-size: 2.5em;
+    animation: conceptPan0 1s 0.25s ease-out forwards, conceptFadeIn 0.5s 0.25s linear forwards, conceptPan1 1s 1.8s ease-in-out forwards;
+}
+
+.conceptDescribe {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    opacity: 0;
+    left: 35%;
+    animation: conceptDescribeFadeIn 0.5s 3s ease-out forwards, conceptFadeIn 0.5s 3s linear forwards;
+}
+
+.conceptDescribeText {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+.conceptDescribeTextInner {
+    margin: 0.25em;
 }
 
 .members {
