@@ -12,19 +12,27 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout to devlop
+      - name: Checkout
         uses: actions/checkout@v2
         with:
           ref: develop
       
-      - name: Auto Minify
-        uses: nizarmah/auto-minify@master
+      - uses: actions/checkout@master
+      - name: Merge develop to master
+        uses: devmasx/merge-branch@v1.3.0
+        with:
+          type: now
+          target_branch: master
+          github_token: ${{ github.token }}
       
-      - name: Checkout to master
+      - name: Checkout
         uses: actions/checkout@v2
         with:
           ref: master
-
+      
+      - name: Auto Minify
+        uses: nizarmah/auto-minify@master
+      
       - name: Auto committing minified files
         uses: stefanzweifel/git-auto-commit-action@v3.0.0
         with:
