@@ -15,8 +15,6 @@ if (navigator.userAgent.indexOf('MSIE') != -1 || navigator.userAgent.indexOf('Tr
         }
     };
     setInterval(countdown, 1000);
-
-
 } else {
     var obj2 = document.getElementById("top");
     obj2.classList.remove("panel");
