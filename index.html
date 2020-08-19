@@ -1,103 +1,167 @@
 <!DOCTYPE html>
-<html lang="js" dir="ltr">
+<html lang="ja" dir="ltr">
 
 <head>
-    <meta charset="utf-8">
-    <title>lmGroupConceptPage</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-css-reset/dist/reset.min.css" />
-    <link rel="stylesheet" href="./style.css">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172410187-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+  <meta charset="utf-8">
+  <title>lmGroupConceptPage</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-css-reset-plus-tool/dist/reset.min.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./test.css">
+  <link rel="stylesheet" href="./icomoon.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172410187-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-        gtag('config', 'UA-172410187-1');
-    </script>
+    gtag('config', 'UA-172410187-1');
+  </script>
+  <!--A code for Google Analytics end-->
 </head>
 
 <body>
-    <main>
-        <noscript><h1 class="errorPanel errorPanelTitle">lmGroup</h1><h2 class="jsError">お使いのブラウザのJavascriptを有効にしてください</h2></noscript>
-        <section id="noIE" class="groups panel">
-            <h1 class="errorPanel errorPanelTitle">lmGroup</h1>
-            <h2 class="errorPanel errorPanelMain">Internet Explorerではご覧いただけません</h2>
-            <div class="errorPanel errorPanelBox">
-                <h3 class="errorPanel errorPanelText"><a href="https://www.microsoft.com/ja-jp/edge">Microsoft Edge</a>, <a href="https://www.google.com/intl/ja_jp/chrome/">Google Chrome</a>, <a href="https://www.mozilla.org/ja/firefox/new/">Mozilla Firefox</a>など</h3>
-                <h3 class="errorPanel errorPanelText">モダンブラウザでご利用ください</h3>
+  <main>
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700&display=swap" rel="stylesheet"><h1 class="errorPanel errorPanelTitle">lmGroup</h1><h2 class="jsError">お使いのブラウザのJavascriptを有効にしてください</h2></noscript>
+    <section id="noIE" class="groups panel">
+      <h1 class="errorPanel errorPanelTitle">lmGroup</h1>
+      <h2 class="errorPanel errorPanelMain">Internet Explorerではご覧いただけません</h2>
+      <div class="errorPanel errorPanelBox">
+        <h3 class="errorPanel errorPanelText"><a href="https://www.microsoft.com/ja-jp/edge">Microsoft Edge</a>, <a href="https://www.google.com/intl/ja_jp/chrome/">Google Chrome</a>, <a href="https://www.mozilla.org/ja/firefox/new/">Mozilla Firefox</a>など</h3>
+        <h3 class="errorPanel errorPanelText">モダンブラウザでご利用ください</h3>
+      </div>
+      <h4 class="errorPanel errorPanelSubText">
+        <p id="errorPanelCount">10</p>秒後にGoogle Chromeのダウンロードページに遷移します</h4>
+    </section>
+    <section id="top" class="groups panel">
+      <h1 id="toptitle" class="toptitle">lmGroup</h1>
+      <div id="topbuttons">
+        <a href="javascript:void(0);" onclick="showpanels('concept')" class="topbutton">Concept</a><br>
+        <a href="javascript:void(0);" onclick="showpanels('about')" class="topbutton">About</a><br>
+        <a href="javascript:void(0);" onclick="showpanels('members')" class="topbutton">Members</a><br>
+        <a href="javascript:void(0);" onclick="showpanels('links')" class="topbutton">Links</a>
+      </div>
+    </section>
+    <section id="panels">
+      <section id="concept" class="groups panel">
+        <section id="test">
+          <h2>concept</h2>
+          <div id="concept_wrap">
+            <p id="concept_subtitle">可能性をあなたに</p>
+            <div id="concept_text">
+              <p>lmGroupは、プログラミングが出来るようになりたいという夢を叶えるお手伝いをしたい。</p>
+              <p>lmGroupは、漫画で見たなんちゃらポケットのように欲しい！と思えるものを提供したい。</p>
+              <p>この時代を生きる私たち学生だからこそ生み出せるものを、日々考えながら制作を進めていきます。</p>
             </div>
-            <h4 class="errorPanel errorPanelSubText">
-                <p id="errorPanelCount">10</p>秒後にGoogle Chromeのダウンロードページに遷移します</h4>
+          </div>
         </section>
-        <section id="top" class="groups panel">
-            <h1 id="toptitle" class="toptitle">lmGroup</h1>
-            <div id="topbuttons">
-                <a href="javascript:void(0);" onclick="showpanels('concept')" class="topbutton">Concept</a><br>
-                <a href="javascript:void(0);" onclick="showpanels('about')" class="topbutton">About</a><br>
-                <a href="javascript:void(0);" onclick="showpanels('members')" class="topbutton">Members</a><br>
-                <a href="javascript:void(0);" onclick="showpanels('links')" class="topbutton">Links</a>
+        <div class="buttons">
+          <div class="bg"></div>
+          <a href="javascript:void(0);" onclick="changePanelL('concept')" class="leftButton panelchangeButton">Top</a>
+          <a href="javascript:void(0);" onclick="changePanelR('concept')" class="rightButton panelchangeButton">About</a>
+        </div>
+        <a href="javascript:void(0);" onclick="nonepanels('concept')" class="closeButton"></a>
+      </section>
+      <section id="about" class="groups panel">
+        <div class="panelwrap">
+          <h2>About</h2>
+        </div>
+        <a href="javascript:void(0);" onclick="changePanelL('about')" class="leftButton panelchangeButton">Concept</a>
+        <a href="javascript:void(0);" onclick="changePanelR('about')" class="rightButton panelchangeButton">Members</a>
+        <a href="javascript:void(0);" onclick="nonepanels('about')" class="closeButton"></a>
+      </section>
+      <section id="members" class="groups panel">
+        <div class="panelwrap">
+          <h2>Members</h2>
+          <h3 class="memberPositions">会長</h3>
+          <div class="members">
+            <div class="member">
+              <h4 class="memberName"> にゃんる</h4>
+              <img src="./img/nyanru.jpg" class="memberIcon" loading="lazy" alt="にゃんるのアイコン">
+              <p class="memberPosition">会長 代表者 役員</p>
+              <p class="memberAccount">Senraiの会長です。意外にちゃんと仕事してます。未熟ですがよろしくお願いいたします。</p>
             </div>
-        </section>
-        <section id="panels">
-            <section id="concept" class="groups panel">
-                <div class="panelwrap">
-                    <h2>Concept</h2>
-                    <p>こんにちは<br>こんにちは<br>こんにちは<br>こんにちは<br>こんにちは<br>こんにちは</p>
-                    <a href="https://alistotres.online">リンクのテスト</a>
-                    <p>もう少し長文を書きます。どうでもいい話ですが、オンライン授業でカメラをつけることになりました。実際カメラで電話することはなかったのでとても緊張してます。<br> カメラをする意味がないといえばまぁそれなないのでしょうが、それでもおかしいです。
-                        <br> なので僕はSnapCameraを使いたいと思います。あれはとても使えます。仮装カメラとしてとても有能なのですが、それをTeamsの会議で使います。すると面白くなり、成績が下がります。みなさん使わないようにしましょうね
-                        <br> 以上さらだぼぉるでした。
-                    </p>
-                    <p>もう少し長文を書きます。どうでもいい話ですが、オンライン授業でカメラをつけることになりました。実際カメラで電話することはなかったのでとても緊張してます。<br> カメラをする意味がないといえばまぁそれなないのでしょうが、それでもおかしいです。
-                        <br> なので僕はSnapCameraを使いたいと思います。あれはとても使えます。仮装カメラとしてとても有能なのですが、それをTeamsの会議で使います。すると面白くなり、成績が下がります。みなさん使わないようにしましょうね
-                        <br> 以上さらだぼぉるでした。
-                    </p>
-                    <p>もう少し長文を書きます。どうでもいい話ですが、オンライン授業でカメラをつけることになりました。実際カメラで電話することはなかったのでとても緊張してます。<br> カメラをする意味がないといえばまぁそれなないのでしょうが、それでもおかしいです。
-                        <br> なので僕はSnapCameraを使いたいと思います。あれはとても使えます。仮装カメラとしてとても有能なのですが、それをTeamsの会議で使います。すると面白くなり、成績が下がります。みなさん使わないようにしましょうね
-                        <br> 以上さらだぼぉるでした。
-                    </p>
+            <div class="member">
+              <h4 class="memberName">LM</h4>
+              <img src="./img/lm.jpg" class="memberIcon" loading="lazy" alt="LMのアイコン">
+              <p class="memberPosition">創立 理事長 最高責任者 会長 役員</p>
+              <p class="memberAccount">Senraiを創立した者です。まだまだ未熟ですがよろしくお願いします。</p>
+            </div>
+          </div>
+          <h3 class="memberPositions">副会長</h3>
+          <div class="members">
+            <div class="member">
+              <h4 class="memberName">シオマル！</h4>
+              <img src="./img/noimage.jpg" class="memberIcon" loading="lazy" alt="シオマルのアイコン">
+              <p class="memberPosition">副会長 役員</p>
+              <p class="memberAccount">どうも、副会長のしおまるです。プログラミングは、まだまだ勉強中の身です。みなさんも一緒にしてみませんか？</p>
+            </div>
+            <div class="member">
+              <h4 class="memberName">miku</h4>
+              <img src="./img/miku.jpg" class="memberIcon" loading="lazy" alt="mikuのアイコン">
+              <p class="memberPosition">副会長</p>
+              <p class="memberAccount">Senraiの副会長やってます。極度のめんどくさがり屋ですが仕事はします。よろしくお願いします</p>
+            </div>
+          </div>
+          <div>
+            <h3 class="memberPositions">部長</h3>
+            <div class="members">
+              <div class="member">
+                <h4 class="memberName">さらだぼぉる</h4>
+                <img src="./img/saladbowl.jpg" class="memberIcon" loading="lazy" alt="さらだぼぉるのアイコン">
+                <p class="memberPosition">開発部長 役員</p>
+                <p class="memberAccount">開発部長のさらだぼぉるです。基本的にweb関連の担当をしています。Twitterの担当者Sは....</p>
+              </div>
+            </div>
+            <div class="members">
+              <div class="member">
+                <div class="member">
+                  <h4 class="memberName">Saqra</h4>
+                  <img src="./img/saqra.jpg" class="memberIcon" loading="lazy" alt="Saqraのアイコン">
+                  <p class="memberPosition">広報部長 デザイン課長 役員</p>
+                  <p class="memberAccount">人事部長のSaqraです。ちょっとかじったくらいのHTMLとデザインができます。Twitter<a href="https://twitter.com/Saqliva">@Saqliva</a> <a href="https://twitter.com/Saqra_Ball">@Saqra_Ball</a> <a href="https://twitter.com/SaqPhoto">@SaqPhoto</a>
+                  </p>
                 </div>
-                <div class="buttons">
-                    <div class="bg"></div>
-                    <a href="javascript:void(0);" onclick="changePanelL('concept')" class="leftButton panelchangeButton">Top</a>
-                    <a href="javascript:void(0);" onclick="changePanelR('concept')" class="rightButton panelchangeButton">About</a>
-                </div>
-                <a href="javascript:void(0);" onclick="nonepanels('concept')" class="closeButton"></a>
-            </section>
-            <section id="about" class="groups panel">
-                <div class="panelwrap">
-                    <h2>About</h2>
-                </div>
-                <a href="javascript:void(0);" onclick="changePanelL('about')" class="leftButton panelchangeButton">Concept</a>
-                <a href="javascript:void(0);" onclick="changePanelR('about')" class="rightButton panelchangeButton">Members</a>
-                <a href="javascript:void(0);" onclick="nonepanels('about')" class="closeButton"></a>
-            </section>
-            <section id="members" class="groups panel">
-                <div class="panelwrap">
-                    <h2>Members</h2>
-                    <p>コーンにちはーーーーー</p>
-                </div>
-                <a href="javascript:void(0);" onclick="changePanelL('members')" class="leftButton panelchangeButton">about</a>
-                <a href="javascript:void(0);" onclick="changePanelR('members')" class="rightButton panelchangeButton">Links</a>
-                <a href="javascript:void(0);" onclick="nonepanels('members')" class="closeButton"></a>
-            </section>
-            <section id="links" class="groups panel">
-                <div class="panelwrap">
-                    <h2>Links</h2>
-                </div>
-                <a href="javascript:void(0);" onclick="changePanelL('links')" class="leftButton panelchangeButton">Members</a>
-                <a href="javascript:void(0);" onclick="changePanelR('links')" class="rightButton panelchangeButton">Top</a>
-                <a href="javascript:void(0);" onclick="nonepanels('links')" class="closeButton"></a>
-            </section>
-        </section>
-    </main>
-    <script src="./iecheck.js" charset="utf-8"></script>
+              </div>
+            </div>
+            <a href="javascript:void(0);" onclick="changePanelL('members')" class="leftButton panelchangeButton">about</a>
+            <a href="javascript:void(0);" onclick="changePanelR('members')" class="rightButton panelchangeButton">Links</a>
+            <a href="javascript:void(0);" onclick="nonepanels('members')" class="closeButton"></a>
+          </div>
+      </section>
+      <section id="links" class="groups panel">
+        <div class="panelwrap">
+          <h2>Links</h2>
+          <div id="links">
+            <div class="SNSlink">
+              <a href="https://twitter.com/Senrai_JP"></a><span class="SNSlinkIcon SNSlinkIcon-twitter icon-twitter"></span><span class="SNSlinkText SNSlinkText-twitter">@Senrai_JP</span>
+            </div>
+            <div class="SNSlink">
+              <a href="https://github.com/SenraiJP"></a><span class="SNSlinkIcon SNSlinkIcon-github icon-github"></span><span class="SNSlinkText SNSlinkText-github">@SenraiJP</span>
+            </div>
+            <div class="SNSlink">
+              <a href="https://www.youtube.com/channel/UCxXtludF_2npT1tUyLdZlRQ"></a><span class="SNSlinkIcon SNSlinkIcon-youtube icon-youtube"></span><span class="SNSlinkText SNSlinkText-youtube">Senrai</span>
+            </div>
+            <div class="SNSlink">
+              <a href="https://lin.ee/vBQ5YWS"></a><span class="SNSlinkIcon SNSlinkIcon-line icon-line"></span><span class="SNSlinkText SNSlinkText-line">Senrai公式LINE</span>
+            </div>
+            <div class="SNSlink">
+              <a href="https://line.me/ti/g2/oNV5hFmza4c6mnRqipLkQg"></a><span class="SNSlinkIcon SNSlinkIcon-line icon-line"></span><span class="SNSlinkText SNSlinkText-line">公式オープンチャット</span>
+            </div>
+          </div>
+        </div>
+        <a href="javascript:void(0);" onclick="changePanelL('links')" class="leftButton panelchangeButton">Members</a>
+        <a href="javascript:void(0);" onclick="changePanelR('links')" class="rightButton panelchangeButton">Top</a>
+        <a href="javascript:void(0);" onclick="nonepanels('links')" class="closeButton"></a>
+      </section>
+    </section>
+  </main>
+  <script src="./iecheck.js" charset="utf-8"></script>
 </body>
 
 </html>

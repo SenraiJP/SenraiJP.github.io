@@ -1,8 +1,44 @@
+.member img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+}
+
+#link {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+#link a {
+    display: block;
+    font-size: 15pt;
+    margin: 10px 0;
+    color: #000;
+}
+
+#link a::before {
+    margin: 0 5px;
+}
+
+
+/* ここまで追記範囲 opacityに関しては共通パーツとして何かおいておいた方がいいかも */
+
+
 /* fontはネットから */
 
 @font-face {
     font-family: 'Bersambung_IWK';
-    src: url("Tegak Bersambung_IWK.woff2") format('woff2'), url("Tegak Bersambung_IWK.woff") format('woff'), url("Tegak Bersambung_IWK.ttf") format('ttf');
+    src: url("TegakBersambungIWK_subsetted.woff2") format('woff2'), url("TegakBersambungIWK_subsetted.woff") format('woff'), url("TegakBersambungIWK_subsetted.ttf") format('ttf');
+}
+
+@font-face {
+    font-family: 'NotoSansJp-EnBlack';
+    src: url("NotoSansJp-EnBlack.woff2") format('woff2'), url("NotoSansJp-EnBlack.woff") format('woff');
+    font-display: swap;
 }
 
 * {
@@ -10,12 +46,19 @@
     padding: 0;
 }
 
+body {
+    overflow-x: hidden;
+    background-color: #fbfaf5;
+    width: 100%;
+    min-height: 100%;
+    /*生成色*/
+}
+
 .groups {
     position: relative;
     width: 100%;
-    height: auto;
     min-height: 100%;
-    background-color: #fff;
+    background-color: #fbfaf5;
 }
 
 main {
@@ -36,11 +79,13 @@ main {
 
 h2,
 h3,
+h4,
 p,
-a {
+a,
+span {
     font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
 }
-
 h2 {
     text-align: center;
     font-size: 2.5em;
@@ -52,6 +97,7 @@ h2 {
 }
 
 .topbutton {
+    font-family: 'NotoSansJp-EnBlack', sans-serif;
     position: relative;
     display: inline-block;
     padding-left: 20px;
@@ -62,6 +108,7 @@ h2 {
 }
 
 .topbutton::after {
+    font-family: 'NotoSansJp-EnBlack', sans-serif;
     content: '';
     width: 0.5em;
     height: 0.5em;
@@ -142,7 +189,8 @@ h2 {
 }
 
 .panel {
-    position: absolute;
+    height: 100%;
+    width: 100%;
     top: 0px;
     left: 0px;
     display: none;
@@ -207,7 +255,7 @@ h2 {
 
 .panelwrap {
     width: 70%;
-    max-width: 500px;
+    max-width: 700px;
     margin: 30px auto;
 }
 
@@ -237,7 +285,7 @@ h2 {
         left: 0px;
         width: 100%;
         height: 60px;
-        background-color: #fff;
+        background-color: #fbfaf5;
     }
     .buttons {
         position: fixed;
@@ -363,6 +411,7 @@ h2 {
     padding: 0.5em;
     margin-top: 5%;
     margin-bottom: 2.5%;
+    font-weight: 700;
 }
 
 .errorPanelText {
@@ -389,4 +438,177 @@ h2 {
 .jsError {
     margin-top: 10%;
     text-align: center;
+    font-weight: 700;
+}
+
+.members {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.memberPositions {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0.25em;
+}
+
+.member {
+    background-color: #eeebdd;
+    border: solid;
+    border-color: #a9a9a9;
+    border-width: 1.5px;
+    margin: 0.5em;
+    width: 100%;
+    flex: 1;
+}
+
+@media screen and (max-width: 767px) {
+    .members {
+        flex-direction: column;
+    }
+    .member {
+        margin: 0.5em;
+    }
+}
+
+.memberName {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.memberPosition {
+    text-align: center;
+    font-size: 1em;
+    color: #808080;
+    font-weight: 700;
+}
+
+.memberAccount {
+    text-align: center;
+    font-size: 1em;
+}
+
+.memberIcon {
+    border-radius: 50%;
+    width: 7.5em;
+    height: 7.5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.SNSlink {
+    background-color: #fff;
+    border-width: 2px;
+    height: 5rem;
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-shadow: 0.25em 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
+}
+
+.SNSlink:hover,
+.SNSlink:active  {
+    transform: translate(0.05em, 0.1em);
+    box-shadow: 0 0 0 0;
+    border: solid;
+    border-width: 1.5px;
+    border-color: #a9a9a9;
+    transition: all 0.2s ease-out 0s;
+}
+
+.SNSlink a {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.SNSlinkText {
+    margin: 0;
+    top: 0;
+    left: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    width: auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    /* 縦方向中央揃え（Safari用） */
+    align-items: center;
+    /* 縦方向中央揃え */
+}
+
+
+@media (max-width: 843px) {
+    .SNSlink{
+      width: 110%;
+    }
+    .SNSlinkIcon {
+        font-size: 2rem;
+        display: inline;
+    }
+    .SNSlinkIcon-twitter {
+        margin-left: 1rem;
+        margin-right: 0.5rem;
+    }
+    .SNSlinkIcon-youtube {
+        margin: 0 1rem;
+    }
+    .SNSlinkIcon-github {
+        margin: 0 1rem;
+    }
+    .SNSlinkIcon-line {
+        margin: 0 1rem;
+    }
+    .SNSlinkText-twitter {
+        font-size: 2rem;
+    }
+    .SNSlinkText-github {
+        font-size: 2rem;
+    }
+    .SNSlinkText-youtube {
+        font-size: 2rem;
+    }
+    .SNSlinkText-line {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 844px) {
+  .SNSlink{
+      width: 95%;
+      margin-left: 3.5em;
+    }
+    .SNSlinkIcon {
+        font-size: 3rem;
+        display: inline;
+    }
+    .SNSlinkIcon-twitter {
+        margin-left: 1.5rem;
+        margin-right: 0.75rem;
+    }
+    .SNSlinkIcon-youtube {
+        margin: 0 1.5rem;
+    }
+    .SNSlinkIcon-github {
+        margin: 0 1.5rem;
+    }
+    .SNSlinkIcon-line {
+        margin: 0 1.5rem;
+    }
+    .SNSlinkText-twitter {
+        font-size: 3rem;
+    }
+    .SNSlinkText-github {
+        font-size: 3rem;
+    }
+    .SNSlinkText-youtube {
+        font-size: 3rem;
+    }
+    .SNSlinkText-line {
+        font-size: 1.5rem;
+    }
 }
