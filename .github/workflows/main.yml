@@ -12,11 +12,15 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: develop
+      
       - name: Auto Minify
         uses: nizarmah/auto-minify@master
       
+
       - name: Auto committing minified files
         uses: stefanzweifel/git-auto-commit-action@v3.0.0
         with:
